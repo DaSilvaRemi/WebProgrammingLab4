@@ -4,9 +4,9 @@ const changeTableWidth = (tableWidth) => {
 };
 
 const changeBorderAndSpacingWidth = (width) => {
-  const table = document.getElementById("table");
-  table.border = width;
-  table.cellspacing = width;
+  const table = document.getElementsByTagName("table");
+  table[0].border = width;
+  table[0].cellSpacing = width;
 };
 
 const changeBackgroundColor = (color) => {
@@ -20,6 +20,6 @@ const changeBackgroundColor = (color) => {
 
 const reset = () => {
     changeTableWidth('200px');
-    changeBorderAndSpacingWidth('1');
+    changeBorderAndSpacingWidth('1px');
     changeBackgroundColor('yellow');
 }
